@@ -25,9 +25,12 @@ function splitSentence(array) {
 splitSentence('vamo que vamo')
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayStrings){
+  let string = arrayStrings
+  let resultado = arrayStrings[arrayStrings.length-1]+', '+arrayStrings[0];
+  return resultado;
 }
+concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])
 
 // Desafio 5
 function footballPoints() {
