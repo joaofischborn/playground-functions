@@ -11,9 +11,11 @@ function compareTrue(value1, value2) {
 compareTrue(true, true)
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, heigth) {
+  let calc = base * heigth / 2;
+  return calc;
 }
+calcArea(10, 50)
 
 // Desafio 3
 function splitSentence() {
