@@ -1,13 +1,13 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 === true && value2 === true){
+  if (value1 === true && value2 === true) {
     return true;
   }
-  if (value1 === false && value2 === false){
+  if (value1 === false && value2 === false) {
     return false;
   }
   return false;
-} 
+}
 compareTrue(true, true)
 
 // Desafio 2
@@ -25,19 +25,19 @@ function splitSentence(array) {
 splitSentence('vamo que vamo')
 
 // Desafio 4
-function concatName(arrayStrings){
+function concatName(arrayStrings) {
   let string = arrayStrings
-  let resultado = arrayStrings[arrayStrings.length-1]+', '+arrayStrings[0];
+  let resultado = arrayStrings[arrayStrings.length - 1] + ', ' + arrayStrings[0];
   return resultado;
 }
 concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  if (wins === 14 && ties === 8){
+  if (wins === 14 && ties === 8) {
     return 50
   }
-  if (wins === 1 && ties === 2){
+  if (wins === 1 && ties === 2) {
     return 5
   }
   return 0
@@ -47,26 +47,36 @@ footballPoints(12, 32)
 // Desafio 6
 function highestCount(arrayNumbers) {
   let maiorNumero = arrayNumbers[0];
-  let contador = 0
-  for(let index = 0; index < arrayNumbers.length; index += 1){
-    if(arrayNumbers[index] >= maiorNumero){
-      maiorNumero = arrayNumbers[index]
+  let contador = 0;
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] >= maiorNumero) {
+      maiorNumero = arrayNumbers[index];
     }
   }
-  for(let index = 0; index < arrayNumbers.length; index += 1){
-    if(arrayNumbers[index] === maiorNumero){
-      contador += 1
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] === maiorNumero) {
+      contador += 1;
     }
   }
-  return contador
+  return contador;
 }
 
 highestCount([9, 1, 2, 3, 9, 5, 7])
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciaGato1 = Math.abs(cat1 - mouse);
+  let distanciaGato2 = Math.abs(cat2 - mouse);
+  
+  if(distanciaGato1 < distanciaGato2){
+    return 'cat1'
+  } else if(distanciaGato1 > distanciaGato2){
+    return 'cat2'
+  } else{
+    return 'os gatos trombam e o rato foge'
+  }
 }
+catAndMouse(5, 6, 8)
 
 // Desafio 8
 function fizzBuzz() {
