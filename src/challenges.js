@@ -81,7 +81,7 @@ catAndMouse(5, 6, 8)
 // Desafio 8
 function fizzBuzz(numbers) {
   let resultado = [];
-  for(let i = 0; i < numbers.length; i =+ 1){
+  for(let i = 0; i < numbers.length; i += 1){
     if(numbers[i] % 3 === 0 && numbers[i] % 5 === 0){
       numbers[i] = resultado.push("fizzBuzz")
     } else if(numbers[i] % 3 === 0){
