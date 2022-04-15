@@ -94,16 +94,22 @@ function fizzBuzz(numbers) {
   }
   return resultado;
 }
-
 fizzBuzz([2, 15, 7, 9, 45])
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(param1) {
+  let resultado = param1
+  resultado = param1.replace(/a/g, 1).replace(/e/g, 2).replace(/i/g, 3).replace(/o/g, 4).replace(/u/g, 5)
+  return resultado;
+} 
+
+function decode(param2) {
+  let resultado2 = param2
+  resultado2 = param2.replace(/1/g, "a").replace(/2/g, "e").replace(/3/g, "i").replace(/4/g, "o").replace(/5/g, "u")
+  return resultado2;
 }
-function decode() {
-  // seu código aqui
-}
+encode("hi there!")
+decode("h3 th2r2!")
 
 // Desafio 10
 function techList() {
