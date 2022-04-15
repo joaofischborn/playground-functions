@@ -112,9 +112,22 @@ encode("hi there!")
 decode("h3 th2r2!")
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tecnologys, name) {
+  let tech = [];
+  tecnologys.sort()
+  for (let i = 0; i < tecnologys.length; i += 1){
+      tech.push({
+        tech: tecnologys[i],
+        name: name
+    })
+  }
+  if (tecnologys.length === 0){
+    return 'Vazio!'
+  }else {
+    return tech
+  }
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
 
 module.exports = {
   calcArea,
