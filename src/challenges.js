@@ -127,7 +127,7 @@ function techList(tecnologys, name) {
     return tech
   }
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
+techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas")
 
 module.exports = {
   calcArea,

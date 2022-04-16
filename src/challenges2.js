@@ -1,3 +1,5 @@
+const { compareTrue } = require("./challenges");
+
 // Desafio 11
 function generatePhoneNumber(numeros){
 let phoneNumber = "(" + numeros[0] + numeros[1] + ")" + " " + numeros[2] + numeros[3] 
@@ -24,14 +26,33 @@ return phoneNumber
 generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9])
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
-}
+function triangleCheck(lineA, lineB, lineC) {
+  let sum = lineA + lineB
+  let dif = Math.abs(sum)
+  if(lineA || lineB < sum && lineA || lineB > dif){
+    return true
+  } else {
+    return false
+  }  
+} 
+triangleCheck(10, 14, 8)
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let num = /\d+/g;
+  let result = string.match(num) 
+  let result2 = result.map(Number)
+  let sum = 0
+  for(var i = 0; i < result2.length; i += 1){
+    sum += result2[i]
+  }
+  if(sum <= 1){
+    return sum + " " + "copo de água"
+  } else {
+    return sum + " " + "copos de água" 
+  } 
 }
+hydrate("10 cervejas, 5 cervejas, 1 cerveja")
 
 module.exports = {
   generatePhoneNumber,
