@@ -27,14 +27,24 @@ generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9])
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let sum = lineA + lineB
-  let dif = Math.abs(sum)
-  if(lineA || lineB < sum && lineA || lineB > dif){
+  let sum1 = lineB + lineC
+  let sum2 = lineA + lineC
+  let sum3 = lineA + lineB
+  let sub1 = Math.abs(lineB - lineC)
+  let sub2 = Math.abs(lineA - lineC)
+  let sub3 = Math.abs(lineA - lineB)
+
+  if(lineA < sum1 && lineA > sub1){
+    return true
+  } else if(lineB < sum2 && lineB > sub2){
+    return true
+  } else if(lineC < sum3 && lineB . sub3){
     return true
   } else {
     return false
-  }  
-} 
+  }
+ 
+}
 triangleCheck(10, 14, 8)
 
 // Desafio 13
